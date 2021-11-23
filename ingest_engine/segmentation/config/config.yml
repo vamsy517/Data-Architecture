@@ -1,0 +1,30 @@
+root_dir: '/home/airflow_gcp/segmentation/v2'
+pred_dir: '/home/airflow_gcp/segmentation/v2/prediction'
+
+# Prob model
+industry_alphas:
+  Automotive & Transportation: 0.1
+  Banking: 0.1
+  Consumer & Lifestyle: 0.1
+  Education: 0.1
+  Energy, Utilities, Oil & Gas: 0.1
+  Healthcare: 0.1
+  Infrastructure, Construction & Design: 0.1
+  Insurance: 0.1
+  Investment & Capital Markets: 0.1
+  Manufacturing & Logistics: 0.1
+  Media, Entertainment and Creative: 0.1
+  Professional Services: 0.1
+  Public Sector & Government: 0.1
+  Technology: 0.1
+industry_theta: 0.1
+domains_in_app:
+  - energymonitor.ai
+  - investmentmonitor.ai
+  - clinicaltrialsarena.com
+#  - mining-technology.com
+#  - pharmaceutical-technology.com
+#  - verdict.co.uk
+#  - army-technology.com
+#  - newstatesman.com
+#  - pressgazette.co.uk
