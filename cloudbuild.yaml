@@ -1,0 +1,8 @@
+#Deployment
+steps:
+- name: gcr.io/google.com/cloudsdktool/cloud-sdk
+  id: Deploy
+  entrypoint: bash
+  args: [ '-c', 'if [ "$BRANCH_NAME" == "master" ]; then echo "$BRANCH_NAME" && gsutil -m rsync -d -r ./ingest_engine gs://${_COMPOSER_BUCKET}/dags; else echo "Working on $BRANCH_NAME"; fi']
+substitutions:
+    _COMPOSER_BUCKET: europe-west2-airflow-dag-co-2e195cc7-bucket
