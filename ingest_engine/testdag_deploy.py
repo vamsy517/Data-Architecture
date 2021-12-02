@@ -11,16 +11,16 @@ default_args = {
 }
 
 dag = DAG(
-    'airflow_monitoring',
+    'testdag_deploy',
     default_args=default_args,
-    description='liveness monitoring dag',
+    description='new dag',
     schedule_interval=None,
-    dagrun_timeout=timedelta(minutes=20))
+    dagrun_timeout=timedelta(minutes=40))
 
 # priority_weight has type int in Airflow DB, uses the maximum.
 t1 = BashOperator(
     task_id='echo',
-    bash_command='echo test',
+    bash_command='echo new dag deployed',
     dag=dag,
     depends_on_past=False,
     priority_weight=2**31-1)
