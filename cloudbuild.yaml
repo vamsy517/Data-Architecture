@@ -1,5 +1,11 @@
 #Deployment
 steps:
+- name: 'docker.io/library/python:3.7'
+  id: Install Dependencies
+  entrypoint: /bin/sh
+  args:
+  - -c
+  - 'pip install -r requirements.txt'
 - name: gcr.io/google.com/cloudsdktool/cloud-sdk
   id: Deploy
   entrypoint: bash
