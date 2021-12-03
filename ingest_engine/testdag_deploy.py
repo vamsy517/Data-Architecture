@@ -1,5 +1,6 @@
 """A liveness prober dag for monitoring composer.googleapis.com/environment/healthy."""
 import airflow
+import pandas
 from airflow import DAG
 from airflow.operators.bash_operator import BashOperator
 from datetime import timedelta
